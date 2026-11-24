@@ -110,7 +110,28 @@ Artifact:
   `Clipboard Manager\Clipboard Manager.exe`.
 
 Open the workflow run in the **Actions** tab and download the artifact from the
-*Artifacts* section. No GitHub Release is created automatically.
+*Artifacts* section. Ordinary branch pushes and manual runs do **not** create a
+GitHub Release.
+
+### Publishing a release
+
+Push a Git tag matching `v*` (for example `v1.0.0`) to build both platforms and
+create a GitHub Release automatically:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+The tag run still uses the native macOS and Windows runners. It additionally
+packs and attaches two archives to a release titled `Clipboard Manager v1.0.0`:
+
+- `Clipboard-Manager-macOS.zip` — the full `.app` bundle;
+- `Clipboard-Manager-Windows.zip` — the complete onedir folder with
+  `Clipboard Manager.exe` and all Qt/runtime dependencies.
+
+The release job waits for both platform jobs to succeed, so a failed build never
+produces a release.
 
 ## Quick start
 
