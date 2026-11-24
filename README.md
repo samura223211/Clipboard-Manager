@@ -34,22 +34,19 @@ system tray when the window is closed.
 
 ## Screenshots
 
-Screenshot placeholders are reserved in `docs/screenshots/`. Add the images at
-these paths when they are ready; the markdown links below can then be uncommented.
+Screenshots are stored in `docs/screenshots/`.
 
-| View | Placeholder file |
-| --- | --- |
-| Main window — all entries | `docs/screenshots/01-main-window.png` |
-| Pinned entries and search | `docs/screenshots/02-pinned-search.png` |
-| Settings | `docs/screenshots/03-settings.png` |
-| System tray context menu | `docs/screenshots/04-tray-menu.png` |
+**Main window — all entries**
 
-<!--
-![Main window](docs/screenshots/01-main-window.png)
+![Main window — all entries](docs/screenshots/01-main-window.png)
+
+**Pinned entries and search**
+
 ![Pinned entries and search](docs/screenshots/02-pinned-search.png)
+
+**Settings**
+
 ![Settings](docs/screenshots/03-settings.png)
-![System tray menu](docs/screenshots/04-tray-menu.png)
--->
 
 ## Installation from source
 
